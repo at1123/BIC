@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলাদেশ ইসলামী ছাত্র শিবির</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif Bengali', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #e6ffe6);
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #1a73e8, #4caf50);
+            padding: 15px 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .navbar:hover {
+            background: linear-gradient(90deg, #4caf50, #1a73e8);
+        }
+
+        .navbar .brand {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 18px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #ffd700;
+        }
+
+        /* Underline Animation */
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: popup 1.5s ease forwards;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        section p {
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #1a73e8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animation */
+        @keyframes popup {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="brand">
+            <img src="data:image/png;base64,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" alt="Logo">
+            বাংলাদেশ ইসলামী ছাত্র শিবির
+        </div>
+        <div>
+            <a href="#porichiti">পরিচিতি</a>
+            <a href="#kormokrom">কার্যক্রম</a>
+            <a href="#form">সমর্থক ফরম</a>
+        </div>
+    </div>
+
+    <!-- পরিচিতি Section -->
+    <section id="porichiti">
+        <h2>পরিচিতি</h2>
+        <p>
+            বাংলাদেশ ইসলামী ছাত্র শিবির একটি আদর্শভিত্তিক ছাত্র সংগঠন। এটি ছাত্রদের মধ্যে ইসলামী মূল্যবোধের প্রচার, 
+            নৈতিকতা ও আচার-আচরণের উন্নয়ন এবং শিক্ষার্থীদের নেতৃত্বের গুণাবলী বিকাশে কাজ করে। এই সংগঠনটি 
+            আল্লাহর সন্তুষ্টির জন্য ইসলামের সুমহান আদর্শকে বাস্তব জীবনে প্রতিষ্ঠা করার লক্ষ্যে কাজ করে।
+        </p>
+    </section>
+
+    <!-- কার্যক্রম Section -->
+    <section id="kormokrom">
+        <h2>কার্যক্রম</h2>
+        <p>
+            ১. শিক্ষার্থীদের নৈতিক উন্নয়নে বিভিন্ন সেমিনার এবং কর্মশালা।<br>
+            ২. সামাজিক উন্নয়নে সেবা কার্যক্রম এবং ত্রাণ বিতরণ।<br>
+            ৩. শিক্ষার্থীদের শিক্ষায় সহযোগিতা প্রদানের জন্য বিভিন্ন প্রকল্প।<br>
+            ৪. আদর্শভিত্তিক নেতৃত্ব তৈরির উদ্যোগ।<br>
+        </p>
+    </section>
+
+    <!-- সমর্থক ফরম Section -->
+    <section id="form">
+        <h2>সমর্থক ফরম</h2>
+        <p>
+            বাংলাদেশ ইসলামী ছাত্র শিবিরের সাথে যুক্ত হতে আগ্রহী? নিচের লিংকে ক্লিক করে সমর্থক ফরম পূরণ করুন:
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeH0hhNmO_jObPPBhINtmLU30v1Z9SeFwWKENFnbJT8hApg1A/viewform?usp=sf_link&usp=embed_facebook" 
+           class="btn" target="_blank">ফরম পূরণ করুন</a>
+    </section>
+</body>
+</html>
